@@ -7,7 +7,21 @@ Things you may want to cover:
 
 * Ruby version
 
+  version 6
+
 * System dependencies
+
+  **Install bundler gem**
+
+  get recent version of Bundler
+
+  `gem install bundler`
+
+  `gem update bundler`
+
+  and run
+
+  `bundle install`
 
 * Configuration
 
@@ -18,9 +32,24 @@ Things you may want to cover:
 
   create an empty database for you
 
-   `$ rake db:create`
+   `$ rake db:create` # creates the databases (if privileged)
+
+   `$ rake db:migrate` # runs migrations from db/migrate
 
 * Database initialization
+
+  You also need to configure your database access here. Here is a sample:
+
+  ```sql
+  development:
+    adapter: mysql
+    database: YourApp_development
+    username: root
+    password: root_password
+    host: localhost
+    pool: 5
+    timeout: 5000
+  ```
 
 * How to run the test suite
 
